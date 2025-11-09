@@ -1,0 +1,12 @@
+#!/bin/bash
+# update_cleanup.sh - System updates and cleanup script
+
+echo "Starting system update..."
+sudo apt update && sudo apt upgrade -y
+
+echo "Cleaning up unnecessary packages..."
+sudo apt autoremove -y
+sudo apt clean
+
+echo "[SUCCESS] System updated and cleaned successfully."
+echo "========== SYSTEM UPDATE FINISHED at $(date) =========="
