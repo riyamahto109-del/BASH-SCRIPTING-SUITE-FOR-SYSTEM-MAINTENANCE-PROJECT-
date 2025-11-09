@@ -1,0 +1,30 @@
+#!/bin/bash
+# maintenance_suite.sh - Suite for system maintenance
+
+while true; do
+  echo "System Maintenance Suite"
+  echo "1. Backup"
+  echo "2. Update & Cleanup"
+  echo "3. Log Monitoring"
+  echo "4. Exit"
+  read -p "Choose an option: " choice
+
+  case $choice in
+    1)
+      ./backup.sh
+      ;;
+    2)
+      ./update_cleanup.sh
+      ;;
+    3)
+      ./log_monitor.sh
+      ;;
+    4)
+      echo "Exiting maintenance suite."
+      exit 0
+      ;;
+    *)
+      echo "Invalid option, please select 1-4."
+      ;;
+  esac
+done
